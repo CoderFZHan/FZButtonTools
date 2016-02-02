@@ -1,0 +1,29 @@
+//
+//  Prefix.pch
+//  FZButtonTools
+//
+//  Created by hanf on 16/2/1.
+//  Copyright © 2016年 FZHan. All rights reserved.
+//
+
+#ifndef Prefix_pch
+#define Prefix_pch
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#endif
+
+
+#define CURRENT_DEVICE [[[UIDevice currentDevice] systemVersion] floatValue]
+#define iOS7 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0)
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+
+// RGB色值
+#define CColorRGBA(R, G, B, A) [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:A]
+#define CColor(R, G, B) CColorRGBA(R, G, B, 1.0f)
+// HEX十六进制色值
+#define CColorFromHexToRGB(hexValue) [UIColor colorWithRed:((float)((hexValue & 0xFF0000) >> 16))/255.0 green:((float)((hexValue & 0xFF00) >> 8))/255.0 blue:((float)(hexValue & 0xFF))/255.0 alpha:1.0]
+
+#endif /* Prefix_pch */
