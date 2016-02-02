@@ -98,7 +98,7 @@ const CGFloat sliderHeight = 2.0;
         [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         [button setSelected:YES];
         _selectedIndex = button.tag;
-        _tap(button, button.tag);
+        _tap(button, button.tag - 7000);
     } else {
         [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [button setSelected:NO];
@@ -125,7 +125,7 @@ const CGFloat sliderHeight = 2.0;
         [sender setSelected:YES];
         _selectedIndex = sender.tag;
         
-        _tap(sender, sender.tag);
+        _tap(sender, sender.tag - 7000);
         [self scrollFZToolsView:sender];
         
         [UIView animateWithDuration:0.2 animations:^{
